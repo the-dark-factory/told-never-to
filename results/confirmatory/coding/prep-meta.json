@@ -1,0 +1,11 @@
+{
+  "shuffle" : "java.util.Collections/shuffle with java.util.Random(seed), over cases.json order",
+  "shuffle_seed" : 20261106,
+  "relay_cases" : 114,
+  "sample_share" : 0.2,
+  "sample_seed" : 20261116,
+  "recipe_masks" : 1225,
+  "cases" : 114,
+  "input" : "_unblinded_casebook/cases.json",
+  "sample_n" : 23
+}

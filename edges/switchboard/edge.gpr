@@ -1,0 +1,24 @@
+project Edge is
+   for Source_Dirs use (".");
+   --  Only the units: the carried cores (and the digit core that Sl_Number_Value_Pkg withs), the switchboard core and its body, the emitted spec, the spliced edge body, the emitted probe driver.
+   for Source_Files use ("reply_line_pkg.ads",
+                         "flat_number_pkg.ads",
+                         "sl_digits_val_pkg.ads",
+                         "sl_number_value_pkg.ads",
+                         "space_words_pkg.ads",
+                         "swarm_switchboard_pkg.ads",
+                         "swarm_switchboard_pkg.adb",
+                         "swarm_switchboard_edge_pkg.ads",
+                         "swarm_switchboard_edge_pkg.adb",
+                         "swarm_switchboard_edge_pkg_probe_main.adb");
+   for Object_Dir use "obj";
+   for Main use ("swarm_switchboard_edge_pkg_probe_main.adb");
+   for Exec_Dir use ".";
+   package Compiler is
+      --  -O2: the carried Reply_Line_Pkg.Line_End is a tail-recursive expression function; a long line
+      --  would otherwise recurse once per byte. -O2 lets gcc turn the tail call into a jump.
+      --  -gnata (after red-team review): the carried cores' Pre/Post contracts are CHECKED at run time,
+      --  so a breach of Decide's or Record_Admitted's preconditions in the glue fails loudly (Ok False) instead of being trusted.
+      for Default_Switches ("Ada") use ("-gnat2022", "-gnatU", "-O2", "-gnata");
+   end Compiler;
+end Edge;

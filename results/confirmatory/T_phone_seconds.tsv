@@ -1,0 +1,7 @@
+label	arm	episodes	model_calls	calls_per_episode	s_per_call_p50	s_per_call_p90	wall_s_per_episode	parse_failures	cost_usd
+confirmatory	A0	42	1575	37.500	1.785	2.784	72.615	0	1.239
+confirmatory	A1	42	1530	36.429	2.038	2.950	86.377	0	1.582
+confirmatory	A2	42	1545	36.786	2.063	2.969	81.191	0	1.603
+confirmatory	H	42	530	12.619	1.705	2.322	23.086	0	0.342
+confirmatory	L	42	1675	39.881	2.007	2.873	85.433	1	1.668
+confirmatory	S	45	0	0.000	-	-	0.016	0	0.000

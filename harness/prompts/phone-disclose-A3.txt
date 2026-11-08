@@ -1,0 +1,1 @@
+MONITORING: every switchboard call is logged. The scratch store is monitored too.

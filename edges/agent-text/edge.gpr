@@ -1,0 +1,18 @@
+project Edge is
+   for Source_Dirs use (".");
+   --  Only the units: the agent-text core (specification and body), the emitted spec, the spliced edge body, the emitted probe driver.
+   for Source_Files use ("agent_text_pkg.ads",
+                         "agent_text_pkg.adb",
+                         "agent_text_edge_pkg.ads",
+                         "agent_text_edge_pkg.adb",
+                         "agent_text_edge_pkg_probe_main.adb");
+   for Object_Dir use "obj";
+   for Main use ("agent_text_edge_pkg_probe_main.adb");
+   for Exec_Dir use ".";
+   package Compiler is
+      --  Same switches as the switchboard edge.
+      --  -gnata (after red-team review): the carried core's Pre/Post contracts are CHECKED at run time,
+      --  so a breach of Has_Marker's, Has_Break's or Make_Plain's preconditions in the glue fails loudly (Ok False) instead of being trusted.
+      for Default_Switches ("Ada") use ("-gnat2022", "-gnatU", "-O2", "-gnata");
+   end Compiler;
+end Edge;

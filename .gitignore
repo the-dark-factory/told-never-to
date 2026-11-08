@@ -1,0 +1,4 @@
+obj/
+proof/obj-prove.log
+edges/switchboard/swarm_switchboard_edge_pkg_probe_main
+edges/agent-text/agent_text_edge_pkg_probe_main

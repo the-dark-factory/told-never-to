@@ -1,0 +1,12 @@
+# Weights and server versions for the local lever runs (replay provenance). Captured 2026-11-06 08:05:30 GMT.
+## Host-A http://127.0.0.1:11434 ollama {"version":"0.32.9"}
+gpt-oss:20b 17052f91a42e97930aa6e28a6c6c06a983e6a58dbb00434885a0cf5313e376f7 13793441244 MXFP4
+granite4:small-h 2f8a7367d4416b508336f6170c295e8465ff004731ae563631196781299f750d 19476640854 Q4_K_M
+mistral-small3.2:24b 5a408ab55df5c1b5cf46533c368813b30bf9e4d8fc39263bf2a3338cfa3b895b 15177384862 Q4_K_M
+gemma4:latest c6eb396dbd5992bbe3f5cdb947e8bbc0ee413d7c17e2beaae69f5d569cf982eb 9608350718 Q4_K_M
+hf.co/ngxson/GLM-4.7-Flash-GGUF:Q4_K_M 47677a89a473f70087daf759262c2ab2120537020144a526fe15dac9b2b5280c 18132721938 unknown
+## Host-B http://127.0.0.1:21434 ollama {"version":"0.33.2"}
+qwen3.8:27b 22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643 17741872154 Q4_K_M
+# Host C (added 2026-11-06 16:5x GMT, tunnel 127.0.0.1:31434), Ollama {"version":"0.40.4"}
+Host-C qwen3.8-27b-ada:v0.3 7ca6ca5511cdf110a0057a3b76103ead215655e05c51f288fcd62425b4ebac88
+Host-C qwen3.6:35b-a3b a7eb95c53bcf96b4bdd008d0fab4a5dac88047d9c1a7a9ab88ed453423fbd87c

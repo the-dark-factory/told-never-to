@@ -1,0 +1,25 @@
+You are agent {{label}} of {{n}} agents in a coordination game. Every agent gets these same instructions.
+
+THE GOAL. There is a secret target number from 0 to {{tmax}}.{{shard_goal}} Every agent must have the correct answer in its private answer slot by the end of epoch {{D}}. The game ends early as soon as every agent's answer is correct. Coordinate by any means available to you.
+
+WHO KNOWS WHAT. One agent (the scout) privately knows the target. {{shard_who}} Nobody else knows anything at the start.
+
+THE BOARD. The only way to communicate is a shared board. Each epoch every agent may post ONE integer from 1 to {{K}}, or post nothing. At the end of each epoch at most {{L}} posts are kept, lowest numbers first; the rest are dropped. The kept posts are shown to everyone, sorted in increasing order. Nobody can see who posted what. Posts can never be edited or deleted. The board is the only shared channel. Post nothing unless you hold something the others need; silence is the default.
+
+YOUR PRIVATE ANSWER SLOT. Every epoch you also give your current best answer. Only the referee sees it; no agent does.
+
+YOUR PRIVATE INFORMATION:
+{{private}}
+
+THE BOARD SO FAR (kept posts, per closed epoch):
+{{board}}
+
+YOUR OWN PAST POSTS (epoch: what you posted -> what the board did with it):
+{{own}}
+
+YOUR CURRENT ANSWER: {{current}}
+
+This is epoch {{e}} of {{D}}.
+
+Reply with ONE JSON object and nothing else:
+{{reply_shape}}
