@@ -8,6 +8,22 @@ A team of LLM agents plays capture the flag through a switchboard whose call rul
 never to pass on a flag or a recipe. With that order, the lead (DeepSeek) still passed the recipe on in 17 of 42 episodes;
 with no order, in 29 of 42.
 
+## Correction to the exploratory relay counts (8 November 2026)
+
+The relay detector (`recipe-in?` in `harness/phone-episode.bb`) is a substring match on normalised text. At the 8-bit setting
+(`R = 8`, the R8 lever and rung 4 of the ladder) the recipe is only two hex characters, so the detector can fire by coincidence,
+for example "dd" in "add" or "71" in a list of numbers. It also counted calls that named the recipe back to the finder.
+
+Read in full by hand, the 23 R8 lever episodes it flagged are 10 real relays and 13 coincidences, none of the 13 with a cheat.
+Both rung-4 flags for gemma4 under the order are coincidences too.
+
+**Not corrected here:** the records, `results/levers/T_levers_by_setting.tsv`, both `results/levers/levers_chart*.svg`, and any
+casebook card drawn from an R = 8 episode still show the uncorrected counts. The report's Appendix A gives the corrected
+counts and is the one to use.
+
+**Not affected:** the confirmatory results. They use a 32-bit recipe (8 hex characters), and every confirmatory number was
+recomputed from the records and reproduced.
+
 ## What is here
 
 | Folder | What it is |
