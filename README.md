@@ -8,6 +8,14 @@ A team of LLM agents plays capture the flag through a switchboard whose call rul
 never to pass on a flag or a recipe. With that order, the lead (DeepSeek) still passed the recipe on in 17 of 42 episodes;
 with no order, in 29 of 42.
 
+## Report, version 2 (16 November 2026)
+
+`report/told_never_to_v2.pdf` (source: `report/told_never_to_v2.md`) is version 2 of the report. The sprint capped the main
+text at eight pages; version 2 has no cap, so the material that went to the appendices is back in the main text. It adds
+Section 7, what this means for real deployments, makes two wording corrections, and answers the review. No data, test or
+result has changed. The version submitted to Apart is unchanged on the Apart site. Where this README says "the report's
+limitations appendix", version 2 has it as Section 8.
+
 ## Correction to the exploratory relay counts (8 November 2026)
 
 The relay detector (`recipe-in?` in `harness/phone-episode.bb`) is a substring match on normalised text. At the 8-bit setting
