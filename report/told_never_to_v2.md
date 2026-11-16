@@ -782,20 +782,19 @@ Everything below existed before the sprint's prior-work cut (6 November 2026, 12
 
 ### Response to the review
 
-I'm grateful for the review, and glad the evaluation design came across as clever. Two points in it deserve an answer.
+Thank you for the review, and I'm glad the evaluation design came across as clever. It raised three points, and this
+version takes each of them on.
 
-**"Minimal discussion about the implications of the results."** That's fair, and Section 7 is new in this version to put it
-right. It sets out what I'd expect to carry over to real multi-agent systems, what I wouldn't, and what a builder should do.
+**"Minimal discussion about the implications of the results."** Agreed. Section 7 is new in this version. It sets out what
+I'd expect to carry over to real multi-agent systems, what I wouldn't, and what a builder should do.
 
-**But much of what reads as missing was in the submitted report.** The sprint caps the main text at eight pages. To meet
-the cap, the limitations went to Appendix D, which ran to about two pages. It covered one model, one wording, one task,
-simulated stakes, power, coding reliability and the confounds in the exploratory work. The tables and method detail went to
-Appendix E. A page cap and a criticism of what is missing from the main text pull in opposite directions. A reader who
-stops at page eight sees a thin limitations section, and the appendices were where the rest was. Version 2 has no cap, so
-it all sits in the main text now, where a reviewer will find it.
+**Limitations and detail.** The limitations were in the submitted report, in Appendix D, at about two pages: one model, one
+wording, one task, simulated stakes, power, coding reliability and the confounds in the exploratory work. The tables and
+method detail were in Appendix E. They sat there to keep the main text within the sprint's eight pages. Version 2 has no
+page limit, so all of it is now in the main text, with the limitations as Section 8.
 
-**"Highly constrained."** It is, and on purpose. Closing every other route by proof is what lets the report say how every
-cheat happened: 0 of 93 unexplained. A looser testbed would have more realism and no such account. Section 7.3 explains what
+**"Highly constrained."** Yes, and that is deliberate. Closing every other route by proof is what lets the report account
+for every cheat: 0 of 93 unexplained. A looser testbed would gain realism and lose that account. Section 7.3 sets out what
 the constraint means for real systems: probably more risk, not less, because real systems have more routes.
 
 ### What changed
